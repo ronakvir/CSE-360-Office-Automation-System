@@ -1,9 +1,9 @@
-package com.example.cse_360_group_project;
+package cse_360_group_project;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class LoginView {
     @FXML
     private Label welcomeText;
 
