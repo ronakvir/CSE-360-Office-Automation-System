@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -28,11 +29,6 @@ public class LoginController {
     private TextField password;
 
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to Login Application!");
-    }
-
     public void initStartScene(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(StartApplication.class.getResource("start-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -44,10 +40,20 @@ public class LoginController {
     public void loginSubmit(ActionEvent event) throws IOException {
         String prefix = UserMockDB.isAlreadyUser(username.getText());
         if (prefix == null) {
+
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("User Not Found");
+            a.show();
+
             return;
         }
         User user = UserMockDB.read(prefix, username.getText());
         if (!user.getPassword().equals(password.getText())) {
+
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setContentText("Incorrect Password");
+            a.show();
+
             return;
         }
 
