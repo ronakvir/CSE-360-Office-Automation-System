@@ -6,6 +6,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="cse_360_group_project.Controllers.CreateAccountController"
@@ -16,16 +18,22 @@
     </padding>
 
 
-    <Button layoutX="171.0" layoutY="180.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Create" />
-    <TextField id="Username" fx:id="Username" layoutX="115.0" layoutY="28.0" />
-    <TextField id="Password"  fx:id="Password" layoutX="115.0" layoutY="78.0" />
+    <Button onAction="#createAccountSubmit" layoutX="171.0" layoutY="180.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Create" />
+    <TextField id="Username" fx:id="username" layoutX="115.0" layoutY="28.0" />
+    <TextField id="Password"  fx:id="password" layoutX="115.0" layoutY="78.0" />
     <Button layoutX="47.0" layoutY="180.0" onAction="#initStartScene" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Back" />
     <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="69.677734375" />
     <Text layoutX="29.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="69.677734375" />
 
-    <CheckBox layoutX="29.0" layoutY="245.0" fx:id="checkBox1" text="Choice 1" />
-    <CheckBox layoutX="29.0" layoutY="295.0" fx:id="checkBox2" text="Choice 2" />
-    <CheckBox layoutX="29.0" layoutY="345.0" fx:id="checkBox3" text="Choice 3" />
+    <ComboBox fx:id="user_type" layoutX="115.0" layoutY="128.0" promptText="select-user-type">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Patient" />
+                <String fx:value="Nurse" />
+                <String fx:value="Doctor" />
+            </FXCollections>
+        </items>
+    </ComboBox>
 
 
 </AnchorPane>

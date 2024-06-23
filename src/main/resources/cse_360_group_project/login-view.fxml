@@ -15,17 +15,12 @@
         </padding>
 
 
-    <Button layoutX="171.0" layoutY="180.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Create" />
-    <TextField id="Username" fx:id="Username" layoutX="115.0" layoutY="28.0" />
-    <TextField id="Password"  fx:id="Password" layoutX="115.0" layoutY="78.0" />
+    <Button onAction="#loginSubmit" layoutX="171.0" layoutY="180.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Login" />
+    <TextField id="Username" fx:id="username" layoutX="115.0" layoutY="28.0" />
+    <TextField id="Password"  fx:id="password" layoutX="115.0" layoutY="78.0" />
     <Button layoutX="47.0" layoutY="180.0" mnemonicParsing="false" onAction="#initStartScene" prefHeight="37.0" prefWidth="79.0" text="Back" />
     <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="69.677734375" />
     <Text layoutX="29.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="69.677734375" />
-
-    <CheckBox layoutX="29.0" layoutY="245.0" fx:id="checkBox1" text="Choice 1" />
-    <CheckBox layoutX="29.0" layoutY="295.0" fx:id="checkBox2" text="Choice 2" />
-    <CheckBox layoutX="29.0" layoutY="345.0" fx:id="checkBox3" text="Choice 3" />
-
 
 
 </AnchorPane>
