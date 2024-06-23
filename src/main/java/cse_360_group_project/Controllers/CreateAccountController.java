@@ -58,12 +58,8 @@ public class CreateAccountController {
         if ("Patient".equals(user_type.getValue())) {
             Patient p1 = new Patient(username.getText(), password.getText());
             UserMockDB.write(p1);
-
-            Parent root = FXMLLoader.load(StartApplication.class.getResource("patient-portal.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, Y_AXIS, X_AXIS);
-            stage.setScene(scene);
-            stage.show();
+            PatientPortalController portal = new PatientPortalController();
+            portal.setPatient(p1, event);
         } else if ("Nurse".equals(user_type.getValue())) {
             System.out.println("Nurse");
         }

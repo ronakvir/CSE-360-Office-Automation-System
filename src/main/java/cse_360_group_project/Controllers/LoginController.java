@@ -51,12 +51,9 @@ public class LoginController {
             return;
         }
 
-        if (user instanceof Patient) {
-            Parent root = FXMLLoader.load(StartApplication.class.getResource("patient-portal.fxml"));
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root, Y_AXIS, X_AXIS);
-            stage.setScene(scene);
-            stage.show();
+        if (user instanceof Patient patient) {
+            PatientPortalController portal = new PatientPortalController();
+            portal.setPatient(patient, event);
         } else if (user instanceof Nurse) {
             System.out.println("Nurse");
         }
