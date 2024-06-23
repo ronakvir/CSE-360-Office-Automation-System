@@ -1,4 +1,4 @@
-package cse_360_group_project;
+package cse_360_group_project.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,14 +12,14 @@ import static cse_360_group_project.Constants.*;
 
 import java.io.IOException;
 
-public class CreateAccountController {
+public class LoginController {
 
     @FXML
     private Label welcomeText;
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to Create Account Application!");
+        welcomeText.setText("Welcome to Login Application!");
     }
 
     public void initStartScene(ActionEvent event) throws IOException {

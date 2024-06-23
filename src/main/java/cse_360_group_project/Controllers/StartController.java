@@ -1,4 +1,4 @@
-package cse_360_group_project;
+package cse_360_group_project.Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

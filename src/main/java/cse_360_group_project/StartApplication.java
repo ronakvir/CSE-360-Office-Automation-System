@@ -19,8 +19,12 @@ public class StartApplication extends Application {
 
 
         UserMockDB testDB = new UserMockDB();
-        testDB.testPut("user", "password");
-        testDB.testGet("user");
+        try {
+            testDB.testPut("ronak", "password");
+            testDB.testGet("ronak");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public static void main(String[] args) {
