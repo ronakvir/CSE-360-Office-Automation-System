@@ -1,4 +1,4 @@
-package cse_360_group_project;
+package cse_360_group_project.Lib;
 
 public final class Constants {
     private Constants() {}

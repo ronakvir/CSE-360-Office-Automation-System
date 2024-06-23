@@ -23,5 +23,9 @@
     <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="69.677734375" />
     <Text layoutX="29.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="69.677734375" />
 
+    <CheckBox layoutX="29.0" layoutY="245.0" fx:id="checkBox1" text="Choice 1" />
+    <CheckBox layoutX="29.0" layoutY="295.0" fx:id="checkBox2" text="Choice 2" />
+    <CheckBox layoutX="29.0" layoutY="345.0" fx:id="checkBox3" text="Choice 3" />
+
 
 </AnchorPane>
