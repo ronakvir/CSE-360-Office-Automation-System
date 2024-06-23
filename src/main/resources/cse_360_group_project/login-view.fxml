@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -18,8 +14,14 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
         </padding>
 
-        <Label fx:id="welcomeText"/>
-        <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+    <Button layoutX="171.0" layoutY="180.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Create" />
+    <TextField id="Username" fx:id="Username" layoutX="115.0" layoutY="28.0" />
+    <TextField id="Password"  fx:id="Password" layoutX="115.0" layoutY="78.0" />
+    <Button layoutX="47.0" layoutY="180.0" mnemonicParsing="false" onAction="#initStartScene" prefHeight="37.0" prefWidth="79.0" text="Back" />
+    <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="69.677734375" />
+    <Text layoutX="29.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="69.677734375" />
+
 
 
 
