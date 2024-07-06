@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="243.0" prefWidth="527.0" style="-fx-background-color: CADETBLUe;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.PatientPortalController">
+<AnchorPane prefHeight="243.0" prefWidth="527.0" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.PatientPortalController">
    <Circle layoutX="80.0" layoutY="69.0" radius="122.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
       <effect>
          <DropShadow />
@@ -24,12 +24,7 @@
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
-                  </color>
-               </Stop>
-               <Stop offset="0.006711409395973154">
-                  <color>
-                     <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
+                     <Color red="0.9473684430122375" green="0.6535087823867798" blue="0.8004385828971863" />
                   </color>
                </Stop>
                <Stop offset="1.0">
@@ -50,12 +45,7 @@
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
-                  </color>
-               </Stop>
-               <Stop offset="0.006711409395973154">
-                  <color>
-                     <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
+                     <Color red="0.9473684430122375" green="0.6535087823867798" blue="0.8004385828971863" />
                   </color>
                </Stop>
                <Stop offset="1.0">
@@ -103,19 +93,19 @@
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Label>
-               <Label alignment="CENTER" contentDisplay="CENTER" text="Age:" textFill="#1e4882" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <Label alignment="CENTER" contentDisplay="CENTER" text="Position:" textFill="#1e4882" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Label>
-               <Label id="staffPosition" fx:id="staffPosition" alignment="CENTER" contentDisplay="CENTER" text="&lt;AGE&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <Label id="staffPosition" fx:id="staffPosition" alignment="CENTER" contentDisplay="CENTER" text="&lt;STAFF POSITION&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Label>
             </children>
          </GridPane>
-         <Button fx:id="editPatientInfo" layoutX="14.0" layoutY="142.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Edit Info" textFill="WHITE" />
+         <Button fx:id="editStaffInfo" layoutX="14.0" layoutY="142.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Edit Info" textFill="WHITE" />
       </children>
    </Pane>
    <Pane layoutX="336.0" layoutY="22.0" prefHeight="200.0" prefWidth="168.0">
@@ -130,20 +120,25 @@
                <ColumnConstraints hgrow="ALWAYS" maxWidth="142.0" minWidth="10.0" prefWidth="19.0" />
             </columnConstraints>
             <rowConstraints>
+               <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
                <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
                <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
                <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Button fx:id="logout" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <Button fx:id="logout" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                   <effect>
                      <DropShadow />
                   </effect></Button>
-               <Button fx:id="gotoMessagingPortal" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Messaging Portal" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <Button fx:id="gotoMessagingPortal" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Messaging Portal" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                   <effect>
                      <DropShadow />
                   </effect></Button>
-               <Button fx:id="gotoAppointmentsPage" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Appointments Page" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <Button fx:id="gotoAppointmentsPage" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Appointments Page" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <effect>
+                     <DropShadow />
+                  </effect></Button>
+               <Button fx:id="gotoMedicalPortal" mnemonicParsing="false" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Medical Portal" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                   <effect>
                      <DropShadow />
                   </effect></Button>

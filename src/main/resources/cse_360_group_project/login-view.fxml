@@ -1,27 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="cse_360_group_project.Controllers.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="324.0" prefWidth="352.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.LoginController">
 
         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
         </padding>
-
-
-    <Button onAction="#loginSubmit" layoutX="171.0" layoutY="180.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="79.0" text="Login" />
-    <TextField id="Username" fx:id="username" layoutX="115.0" layoutY="28.0" />
-    <TextField id="Password"  fx:id="password" layoutX="115.0" layoutY="78.0" />
-    <Button layoutX="47.0" layoutY="180.0" mnemonicParsing="false" onAction="#initStartScene" prefHeight="37.0" prefWidth="79.0" text="Back" />
-    <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="69.677734375" />
-    <Text layoutX="29.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="69.677734375" />
+   <Circle layoutX="211.0" layoutY="188.0" radius="92.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="110.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="0.7577197149643705" startX="0.8052256532066508">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006711409395973154">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.38190001249313354" green="0.6700000166893005" blue="0.6411899924278259" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Circle>
+   <Circle layoutX="77.0" layoutY="183.0" radius="108.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="100.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006711409395973154">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.38190001249313354" green="0.6700000166893005" blue="0.6411899924278259" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Circle>
+   <Circle layoutX="174.0" layoutY="150.0" radius="65.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateY="150.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="0.006711409395973154">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.38190001249313354" green="0.6700000166893005" blue="0.6411899924278259" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+      <effect>
+         <DropShadow />
+      </effect>
+   </Circle>
+   <Pane layoutX="69.0" layoutY="102.0" prefHeight="122.0" prefWidth="215.0">
+      <children>
+         <GridPane layoutY="-4.0" maxWidth="215.0" prefWidth="215.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
+           <columnConstraints>
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+                <TextField id="Username" fx:id="username" style="-fx-background-radius: 20px;" GridPane.rowIndex="1">
+                  <effect>
+                     <DropShadow />
+                  </effect>
+               </TextField>
+                <TextField id="Password" fx:id="password" style="-fx-background-radius: 20px;" GridPane.rowIndex="3">
+                  <effect>
+                     <DropShadow />
+                  </effect>
+               </TextField>
+                <Text fill="#151957" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="56.677734375" GridPane.halignment="CENTER">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+               </Text>
+                <Text fill="#151957" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="53.677734375" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                  <font>
+                     <Font name="System Bold" size="13.0" />
+                  </font>
+               </Text>
+            </children>
+            <padding>
+               <Insets bottom="10.0" left="15.0" right="15.0" />
+            </padding>
+            <effect>
+               <DropShadow />
+            </effect>
+         </GridPane>
+      </children>
+   </Pane>
+   <Pane layoutX="69.0" layoutY="38.0" prefHeight="53.0" prefWidth="215.0">
+      <children>
+         <GridPane hgap="5.0" layoutY="2.0" maxWidth="215.0" prefHeight="50.0" prefWidth="215.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <padding>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Button fx:id="createAccountBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Create Account" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Button>
+               <Button fx:id="patientLoginBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Patient Login" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Button>
+               <Button fx:id="staffLoginBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Staff Login" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="2">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Button>
+            </children>
+         </GridPane>
+      </children>
+   </Pane>
+   <Pane layoutX="69.0" layoutY="238.0" prefHeight="53.0" prefWidth="215.0">
+      <children>
+         <GridPane layoutX="2.0" layoutY="8.0" maxWidth="215.0" prefWidth="215.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+            
+                  
+                      <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginSubmit" prefHeight="37.0" prefWidth="79.0" style="-fx-background-color: darkslategrey; -fx-background-radius: 25px;" text="Login" textFill="WHITE" GridPane.halignment="CENTER">
+                  <effect>
+                     <DropShadow />
+                  </effect>
+               </Button>
+            </children>
+            <padding>
+               <Insets bottom="5.0" top="5.0" />
+            </padding>
+         </GridPane>
+      </children>
+   </Pane>
 
 
 </AnchorPane>
-
