@@ -13,7 +13,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import static cse_360_group_project.Lib.Constants.*;
@@ -23,20 +22,33 @@ import java.io.IOException;
 public class CreateAccountController {
 
     @FXML
-    private Label welcomeText;
-    @FXML
-    private ComboBox<String> user_type;
+    private ComboBox<String> userTypeDropdown;
     @FXML
     private TextField username;
     @FXML
     private TextField password;
-
+    @FXML
+    private TextField email;
+    @FXML
+    private TextField phone;
+    @FXML
+    private TextField firstname;
+    @FXML
+    private TextField lastname;
+    @FXML
+    private TextField age;
+    @FXML
+    private TextField emergencyname;
+    @FXML
+    private TextField emergencycontactphone;
+    @FXML
+    private TextField emergencyrelation;
     @FXML
     public void initialize() {
-        user_type.setItems(FXCollections.observableArrayList("Patient", "Nurse", "Doctor"));
+        userTypeDropdown.setItems(FXCollections.observableArrayList("Patient", "Nurse", "Doctor"));
     }
 
-
+    @FXML
     public void initStartScene(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(StartApplication.class.getResource("start-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -45,23 +57,31 @@ public class CreateAccountController {
         stage.show();
     }
 
+    @FXML
     public void createAccountSubmit(ActionEvent event) throws IOException {
         String prefix = UserMockDB.isAlreadyUser(username.getText());
         if (prefix != null) {
-
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setContentText("User already has account");
             a.show();
-
             return;
         }
 
-        if ("Patient".equals(user_type.getValue())) {
-            Patient p1 = new Patient(username.getText(), password.getText());
+        if ("Patient".equals(userTypeDropdown.getValue())) {
+            Patient p1 = new Patient(username.getText(), password.getText(), firstname.getText(), lastname.getText(), phone.getText(), email.getText(), emergencyname.getText(), emergencyrelation.getText(), age.getText());
             UserMockDB.write(p1);
-            PatientPortalController portal = new PatientPortalController();
-            portal.setPatient(p1, event);
-        } else if ("Nurse".equals(user_type.getValue())) {
+
+            FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("patient-portal.fxml"));
+            Parent root = loader.load();
+
+            PatientPortalController controller = loader.getController();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+            stage.setScene(scene);
+            stage.show();
+            controller.setPatient(p1);
+
+        } else if ("Nurse".equals(userTypeDropdown.getValue())) {
             System.out.println("Nurse");
         }
     }
