@@ -2,6 +2,7 @@ package cse_360_group_project.Controllers;
 
 import cse_360_group_project.Lib.UserMockDB;
 import cse_360_group_project.StartApplication;
+import cse_360_group_project.Users.Doctor;
 import cse_360_group_project.Users.Nurse;
 import cse_360_group_project.Users.Patient;
 import cse_360_group_project.Users.User;
@@ -77,8 +78,18 @@ public class LoginController {
             stage.show();
             controller.setPatient(patient);
 
-        } else if (user instanceof Nurse) {
-            System.out.println("Nurse");
+        } else if (user instanceof Nurse || user instanceof Doctor) {
+            FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("staff-portal.fxml"));
+            Parent root = loader.load();
+
+            StaffPortalController controller = loader.getController();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+            stage.setScene(scene);
+            stage.show();
+            controller.setUser(user);
+
         }
     }
 }
