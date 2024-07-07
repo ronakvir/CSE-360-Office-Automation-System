@@ -51,7 +51,7 @@ public class PatientPortalController {
     }
     @FXML
     public void initMessagingPortal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(StartApplication.class.getResource(".fxml"));
+        Parent root = FXMLLoader.load(StartApplication.class.getResource("messaging-portal.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
         stage.setScene(scene);

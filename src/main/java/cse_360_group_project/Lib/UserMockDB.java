@@ -11,7 +11,7 @@ public class UserMockDB {
 
     public static boolean write(User user) {
         try {
-            File file = new File(DB_PATH + "/" + user.getDBPrefix() + user.getUsername() + ".txt");
+            File file = new File(USER_DB_PATH + "/" + user.getDBPrefix() + user.getUsername() + ".txt");
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file));
             oos.writeObject(user);
             oos.close();
@@ -23,7 +23,7 @@ public class UserMockDB {
 
     public static User read(String prefix, String username) {
         try {
-            File file = new File(DB_PATH + "/" + prefix + username + ".txt");
+            File file = new File(USER_DB_PATH + "/" + prefix + username + ".txt");
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
 
             User user = (User) ois.readObject();
@@ -40,7 +40,7 @@ public class UserMockDB {
     public static String isAlreadyUser(String username) {
         for (String prefix : DB_PREFIXES) {
             try {
-                File file = new File(DB_PATH + "/" + prefix + username + ".txt");
+                File file = new File(USER_DB_PATH + "/" + prefix + username + ".txt");
                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
 
                 ois.close();
