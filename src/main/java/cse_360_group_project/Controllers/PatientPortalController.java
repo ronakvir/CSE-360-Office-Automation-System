@@ -59,7 +59,12 @@ public class PatientPortalController {
     }
     @FXML
     public void initAppointmentsPage(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(StartApplication.class.getResource("patient-appointments-page.fxml"));
+    	FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("patient-appointments-page.fxml"));
+        Parent root = loader.load();
+
+        PatientAppointmentsController controller = loader.getController();
+        controller.setPatient(patient);
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
         stage.setScene(scene);
