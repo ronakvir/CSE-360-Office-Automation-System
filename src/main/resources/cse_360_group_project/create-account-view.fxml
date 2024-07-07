@@ -103,7 +103,7 @@
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="60.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
                <TextField id="username" fx:id="username" alignment="CENTER" promptText="Enter Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <TextField id="password" fx:id="password" alignment="CENTER" promptText="Create Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-               <TextField id="dateOfBirth" fx:id="DOB" alignment="CENTER" promptText="Month / Day / Year *12/25/1960*" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               <TextField id="dateOfBirth" fx:id="age" alignment="CENTER" promptText="Age *0-99*" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="54.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm" wrappingWidth="44.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth" wrappingWidth="67.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />

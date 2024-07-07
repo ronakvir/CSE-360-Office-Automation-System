@@ -5,9 +5,8 @@ public class Patient extends User {
 
     private String address;
     private String telephone;
-    private Integer age;
     private String email;
-    private String date_of_birth;
+    private String age;
     private String gender;
     private String emergency_contact;
     private String emergency_contact_phone;
@@ -18,7 +17,7 @@ public class Patient extends User {
 
 
 
-    public Patient(String username, String password, String first_name, String lastname, String telephone, String email, String emergency_contact, String emergency_contact_relation) {
+    public Patient(String username, String password, String first_name, String lastname, String telephone, String email, String emergency_contact, String emergency_contact_relation, String age) {
         super(username, password);
         this.firstname = first_name;
         this.lastname = lastname;
@@ -26,6 +25,7 @@ public class Patient extends User {
         this.email = email;
         this.emergency_contact = emergency_contact;
         this.emergency_contact_relation = emergency_contact_relation;
+        this.age = age;
 
     }
 
@@ -71,19 +71,11 @@ public class Patient extends User {
         this.email = email;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
-
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
-    }
-
-    public String getDate_of_birth() {
-        return date_of_birth;
-    }
-    public void setDate_of_birth(String date_of_birth) {
-        this.date_of_birth = date_of_birth;
     }
     public String getGender() {
         return gender;

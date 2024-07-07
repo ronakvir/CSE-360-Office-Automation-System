@@ -738,7 +738,7 @@
                <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Button fx:id="logoutBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <Button fx:id="logoutBtn" onAction="#initStartScene" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                   <effect>
                      <DropShadow />
                   </effect></Button>

@@ -36,7 +36,7 @@ public class CreateAccountController {
     @FXML
     private TextField lastname;
     @FXML
-    private TextField DOB;
+    private TextField age;
     @FXML
     private TextField emergencyname;
     @FXML
@@ -68,7 +68,7 @@ public class CreateAccountController {
         }
 
         if ("Patient".equals(userTypeDropdown.getValue())) {
-            Patient p1 = new Patient(username.getText(), password.getText(), firstname.getText(), lastname.getText(), phone.getText(), email.getText(), emergencyname.getText(), emergencyrelation.getText());
+            Patient p1 = new Patient(username.getText(), password.getText(), firstname.getText(), lastname.getText(), phone.getText(), email.getText(), emergencyname.getText(), emergencyrelation.getText(), age.getText());
             UserMockDB.write(p1);
 
             FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("patient-portal.fxml"));

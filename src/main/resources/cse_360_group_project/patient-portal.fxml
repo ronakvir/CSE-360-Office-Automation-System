@@ -98,7 +98,7 @@
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Label>
-               <Label id="phoneNumber" fx:id="phoneNumber" text="&lt;PHONE NUMBER&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <Label id="phoneNumber" fx:id="phone" text="&lt;PHONE NUMBER&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
@@ -108,7 +108,7 @@
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Label>
-               <Label id="staffPosition" fx:id="staffPosition" alignment="CENTER" contentDisplay="CENTER" text="&lt;AGE&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <Label id="staffPosition" fx:id="age" alignment="CENTER" contentDisplay="CENTER" text="&lt;AGE&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
@@ -139,11 +139,11 @@
                   <effect>
                      <DropShadow />
                   </effect></Button>
-               <Button fx:id="gotoMessagingPortal" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Messaging Portal" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <Button fx:id="gotoMessagingPortal" onAction="#initMessagingPortal" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Messaging Portal" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                   <effect>
                      <DropShadow />
                   </effect></Button>
-               <Button fx:id="gotoAppointmentsPage" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Appointments Page" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <Button fx:id="gotoAppointmentsPage" onAction="#initAppointmentsPage" mnemonicParsing="false" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Appointments Page" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                   <effect>
                      <DropShadow />
                   </effect></Button>

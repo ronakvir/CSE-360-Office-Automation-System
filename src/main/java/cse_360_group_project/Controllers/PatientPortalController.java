@@ -20,6 +20,10 @@ public class PatientPortalController {
     private Patient patient;
     @FXML
     private Label full_name;
+    @FXML
+    private Label age;
+    @FXML
+    private Label phone;
 
     public PatientPortalController() {
     }
@@ -32,12 +36,30 @@ public class PatientPortalController {
         System.out.println(patient.getFirstname());
 
         full_name.setText(patient.getLastname() + ", " + patient.getFirstname());
+        age.setText(String.valueOf(patient.getAge()));
+        phone.setText(patient.getTelephone());
 
     }
 
     @FXML
     public void initStartScene(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(StartApplication.class.getResource("start-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void initMessagingPortal(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(StartApplication.class.getResource(".fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    public void initAppointmentsPage(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(StartApplication.class.getResource("patient-appointments-page.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
         stage.setScene(scene);
