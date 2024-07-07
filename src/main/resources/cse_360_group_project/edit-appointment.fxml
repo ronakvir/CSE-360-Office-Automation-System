@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.EditApptController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Circle layoutX="120.0" layoutY="156.0" radius="178.0" stroke="#ffffff00" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="0.501187648456057" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color blue="1.0" green="1.0" red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color blue="0.6796169281005859" green="0.6899999976158142" red="0.35190001130104065" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Circle>
+   
+   
+      <Pane layoutX="218.0" layoutY="24.0" prefHeight="301.0" prefWidth="377.0">
+         <children>
+            <GridPane alignment="CENTER" layoutX="-176.0" layoutY="3.0" prefHeight="336.0" prefWidth="627.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+               <children>
+                  <Text fx:id="firstnameLabel1" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" textAlignment="CENTER" wrappingWidth="59.677734375" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                  <TextField id="firstName" fx:id="apptDate" alignment="CENTER" promptText="Enter Appointment Date" GridPane.rowIndex="2" />
+                  <Text fx:id="lastnameLabel1" strokeType="OUTSIDE" strokeWidth="0.0" text="Reason for Visit" wrappingWidth="87.677734375" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+                  <TextField id="lastName" fx:id="reasonForVisit" alignment="CENTER" promptText="Enter Reason for Visit" GridPane.rowIndex="4" />
+                  <Text fx:id="phoneLabel1" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight" textAlignment="CENTER" wrappingWidth="82.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+                  <TextField id="phoneNumber" fx:id="weight" alignment="CENTER" promptText="Enter Weight in Pounds" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Text fx:id="emailLabel1" strokeType="OUTSIDE" strokeWidth="0.0" text="Height" wrappingWidth="37.677734375" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+                  <TextField id="email" fx:id="height" alignment="CENTER" promptText="Enter Height in cm" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Body Temp" wrappingWidth="60.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                  <TextField id="username" fx:id="bodyTemp" alignment="CENTER" promptText="Enter Body Temp in F" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField id="password" fx:id="bpHigh" alignment="CENTER" promptText="Enter high blood pressure" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField id="dateOfBirth" fx:id="bpLow" alignment="CENTER" promptText="Enter low blood pressure" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Pressure " wrappingWidth="83.677734375" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                  <Text fx:id="lastnameLabel11" strokeType="OUTSIDE" strokeWidth="0.0" text="Symptoms" textAlignment="CENTER" wrappingWidth="206.677734375" GridPane.rowIndex="5" />
+                  <TextField id="lastName" fx:id="symptoms" alignment="CENTER" promptText="Enter Symptoms" GridPane.rowIndex="6" />
+                  <Text fx:id="lastnameLabel111" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnoses" textAlignment="CENTER" wrappingWidth="206.677734375" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField id="lastName" fx:id="diagnoses" alignment="CENTER" promptText="Enter New Diagnoses" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Text fx:id="lastnameLabel1111" strokeType="OUTSIDE" strokeWidth="0.0" text="Prescriptions" textAlignment="CENTER" wrappingWidth="206.677734375" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <TextField id="lastName" fx:id="prescriptions" alignment="CENTER" promptText="Enter New Prescriptions" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Text fx:id="apptTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment info for &lt;First Name&gt; &lt;Last Name&gt;" underline="true" wrappingWidth="320.677734375">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <rowConstraints>
+                  <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   
+       <Pane layoutX="34.0" layoutY="294.0" />
+   
+       <Pane layoutX="582.0" layoutY="294.0" />
+   
+       <Pane layoutX="34.0" layoutY="15.0" />
+         <Button fx:id="backButton" layoutX="48.0" layoutY="399.0" onAction="#initAppointmentsPage" prefHeight="37.0" prefWidth="79.0" text="Back" />
+         <Button fx:id="saveButton" layoutX="529.0" layoutY="399.0" onAction="#saveAppointment" prefHeight="37.0" prefWidth="129.0" text="Save Appointment" />
+   </children>
+
+
+</AnchorPane>
