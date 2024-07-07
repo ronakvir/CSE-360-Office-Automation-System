@@ -14,6 +14,7 @@ public class Patient extends User {
     private String firstname;
     private String lastname;
     private String phone;
+    private String information;
 
 
 
@@ -61,6 +62,14 @@ public class Patient extends User {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+    
+    public String getInformation() {
+    	return information;
+    }
+    
+    public void setInformation(String info) {
+    	this.information = info;
     }
 
     public String getEmail() {
