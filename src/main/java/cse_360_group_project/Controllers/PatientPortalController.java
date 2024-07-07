@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -24,6 +25,8 @@ public class PatientPortalController {
     private Label age;
     @FXML
     private Label phone;
+    @FXML
+    private TextArea information;
 
     public PatientPortalController() {
     }
@@ -38,6 +41,8 @@ public class PatientPortalController {
         full_name.setText(patient.getLastname() + ", " + patient.getFirstname());
         age.setText(String.valueOf(patient.getAge()));
         phone.setText(patient.getTelephone());
+        information.setText(patient.getInformation());
+        information.setEditable(false);
 
     }
 
