@@ -17,8 +17,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="302.0" prefWidth="367.0" style="-fx-background-color: pink;">
+    <AnchorPane prefHeight="302.0" prefWidth="367.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="cse_360_group_project.Controllers.EditInfoController">
       <children>
          <Circle layoutX="241.0" layoutY="-72.0" radius="122.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" translateX="-20.0" translateY="50.0">
             <effect>
@@ -145,11 +144,11 @@
                      <RowConstraints maxHeight="20.0" minHeight="9.0" prefHeight="20.0" vgrow="SOMETIMES" />
                   </rowConstraints>
                   <children>
-                     <Button fx:id="saveBtn" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                     <Button fx:id="saveBtn" onAction="#saveInfo" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                         <effect>
                            <DropShadow />
                         </effect></Button>
-                     <Button fx:id="cancelBtn" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Cancel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                     <Button fx:id="cancelBtn" onAction="#backToPortal" mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Cancel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                         <font>
                            <Font name="System Bold" size="13.0" />
                         </font>
@@ -162,4 +161,3 @@
             </children>
          </Pane>
       </children></AnchorPane>
-</Scene>

@@ -65,4 +65,20 @@ public class PatientPortalController {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    public void initEditInfo(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("staffEditInfo.fxml"));
+        Parent root = loader.load();
+
+        // Correctly get the EditInfoController instead of PatientPortalController
+        EditInfoController controller = loader.getController();
+        controller.setPatient(patient);
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
