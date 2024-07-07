@@ -2,8 +2,6 @@ package cse_360_group_project.Controllers;
 
 import cse_360_group_project.Lib.UserMockDB;
 import cse_360_group_project.StartApplication;
-import cse_360_group_project.Users.Doctor;
-import cse_360_group_project.Users.Nurse;
 import cse_360_group_project.Users.Patient;
 import cse_360_group_project.Users.User;
 import javafx.event.ActionEvent;
@@ -13,7 +11,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -74,7 +71,7 @@ public class StaffPortalController {
             }
             User user = UserMockDB.read(prefix, patientSearch);
             if (user instanceof Patient patient) {
-                FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("patient-medical-portal.fxml"));
+                FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("staff-view-patient-medical-portal.fxml"));
                 Parent root = loader.load();
 
                 MedicalPortalController controller = loader.getController();
