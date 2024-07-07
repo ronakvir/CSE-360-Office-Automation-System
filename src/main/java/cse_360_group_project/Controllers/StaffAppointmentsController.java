@@ -13,7 +13,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -96,7 +95,7 @@ public class StaffAppointmentsController {
 
     @FXML
     public void initMedicalPortal(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("patient-medical-portal.fxml"));
+        FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("staff-view-patient-medical-portal.fxml"));
         Parent root = loader.load();
 
         MedicalPortalController controller = loader.getController();

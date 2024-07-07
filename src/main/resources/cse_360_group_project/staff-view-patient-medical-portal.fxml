@@ -153,7 +153,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button fx:id="gotoMessagingPortal" mnemonicParsing="false" onAction="#initStaffPage" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Return to Staff Page" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                  <Button fx:id="gotoStaffPage" mnemonicParsing="false" onAction="#initStaffPage" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Return to Staff Page" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>

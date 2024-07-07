@@ -1,11 +1,9 @@
 package cse_360_group_project.Lib;
 
-import cse_360_group_project.Users.User;
 import java.util.Scanner;
 import java.io.*;
 
 import static cse_360_group_project.Lib.Constants.APPOINTMENTS_DB_PATH;
-import static cse_360_group_project.Lib.Constants.USER_DB_PATH;
 
 public class Appointment {
     String patient = "empty";
