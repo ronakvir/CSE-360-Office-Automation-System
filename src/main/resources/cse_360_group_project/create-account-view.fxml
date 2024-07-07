@@ -20,7 +20,11 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane minHeight="-Infinity" prefHeight="349.0" prefWidth="701.0" style="-fx-background-color: CADETBLUE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.CreateAccountController">
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cse_360_group_project.Controllers.CreateAccountController"
+            prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: CADETBLUE;" >
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -69,27 +73,6 @@
    </Circle>
 
 
-    <Button id="createAccount" fx:id="submitCreateAccountBtn" layoutX="582.0" layoutY="294.0" mnemonicParsing="false" onAction="#createAccountSubmit" prefHeight="37.0" prefWidth="79.0" text="Create" textAlignment="CENTER">
-      <effect>
-         <DropShadow />
-      </effect></Button>
-    <Button id="backButton" fx:id="returnToLoginBtn" layoutX="34.0" layoutY="294.0" mnemonicParsing="false" onAction="#initStartScene" prefHeight="37.0" prefWidth="79.0" text="Back">
-      <effect>
-         <DropShadow />
-      </effect></Button>
-
-    <ComboBox id="select-user-type" fx:id="userTypeDropdown" layoutX="34.0" layoutY="15.0" promptText="Select Account Type" visibleRowCount="2">
-        <items>
-            <FXCollections fx:factory="observableArrayList">
-                <String fx:value="Patient" />
-                <String fx:value="Nurse" />
-                <String fx:value="Doctor" />
-            </FXCollections>
-        </items>
-      <effect>
-         <DropShadow />
-      </effect>
-    </ComboBox>
    <Pane layoutX="218.0" layoutY="24.0" prefHeight="301.0" prefWidth="377.0">
       <children>
          <GridPane alignment="CENTER" layoutX="-183.0" layoutY="36.0" prefHeight="215.0" prefWidth="627.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
@@ -120,7 +103,6 @@
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="60.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
                <TextField id="username" fx:id="username" alignment="CENTER" promptText="Enter Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                <TextField id="password" fx:id="password" alignment="CENTER" promptText="Create Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-               <TextField id="passwordConfrim" fx:id="passwordConfirm" alignment="CENTER" promptText="Re-enter Password" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                <TextField id="dateOfBirth" fx:id="DOB" alignment="CENTER" promptText="Month / Day / Year *12/25/1960*" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="54.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm" wrappingWidth="44.677734375" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
@@ -177,6 +159,26 @@
          <DropShadow />
       </effect>
    </Circle>
+
+    <Pane layoutX="34.0" layoutY="294.0">
+        <children>
+            <Button fx:id="returnToLoginBtn" onAction="#initStartScene" prefHeight="37.0" prefWidth="79.0" text="Back" />
+        </children>
+    </Pane>
+
+    <Pane layoutX="582.0" layoutY="294.0">
+        <children>
+            <Button fx:id="submitCreateAccountBtn" onAction="#createAccountSubmit" prefHeight="37.0" prefWidth="79.0" text="Create" />
+        </children>
+    </Pane>
+
+    <Pane layoutX="34.0" layoutY="15.0">
+        <ComboBox id="select-user-type" fx:id="userTypeDropdown" promptText="Select Account Type" visibleRowCount="2">
+            <effect>
+                <DropShadow />
+            </effect>
+        </ComboBox>
+    </Pane>
 
 
 </AnchorPane>

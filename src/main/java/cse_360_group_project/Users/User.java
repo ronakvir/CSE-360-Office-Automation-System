@@ -6,10 +6,6 @@ public abstract class User implements Serializable {
 
     private String username;
     private String password;
-    private String address;
-    private String telephone;
-    private String cpf;
-    private Integer age;
 
     public User(String username, String password) {
         this.username = username;
@@ -33,37 +29,6 @@ public abstract class User implements Serializable {
         this.password = password;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     public String getDBPrefix() {
         return "user#";

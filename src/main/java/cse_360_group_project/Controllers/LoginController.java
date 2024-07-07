@@ -37,6 +37,14 @@ public class LoginController {
         stage.show();
     }
 
+    public void initCreateAccountScene(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(StartApplication.class.getResource("create-account-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void loginSubmit(ActionEvent event) throws IOException {
         String prefix = UserMockDB.isAlreadyUser(username.getText());
         if (prefix == null) {
@@ -58,8 +66,17 @@ public class LoginController {
         }
 
         if (user instanceof Patient patient) {
-            PatientPortalController portal = new PatientPortalController();
-            portal.setPatient(patient, event);
+            FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("patient-portal.fxml"));
+            Parent root = loader.load();
+
+            PatientPortalController controller = loader.getController();
+
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root, Y_AXIS, X_AXIS);
+            stage.setScene(scene);
+            stage.show();
+            controller.setPatient(patient);
+
         } else if (user instanceof Nurse) {
             System.out.println("Nurse");
         }

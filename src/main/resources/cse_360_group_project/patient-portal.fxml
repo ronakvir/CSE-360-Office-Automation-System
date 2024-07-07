@@ -88,7 +88,7 @@
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Label>
-               <Label id="name" fx:id="staffName" alignment="CENTER" contentDisplay="CENTER" text="&lt;LAST, FIRST NAME&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <Label  fx:id="full_name" alignment="CENTER" contentDisplay="CENTER" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
@@ -135,7 +135,7 @@
                <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-               <Button fx:id="logout" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <Button fx:id="logout" onAction="#initStartScene" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                   <effect>
                      <DropShadow />
                   </effect></Button>

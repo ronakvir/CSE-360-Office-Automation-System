@@ -160,17 +160,12 @@
                <DropShadow />
             </effect>
             <children>
-               <Button fx:id="createAccountBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Create Account" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <Button onAction="#initStartScene" fx:id="BackBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Back to Portal" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1">
                   <font>
                      <Font size="11.0" />
                   </font>
                </Button>
-               <Button fx:id="patientLoginBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Patient Login" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1">
-                  <font>
-                     <Font size="11.0" />
-                  </font>
-               </Button>
-               <Button fx:id="staffLoginBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Staff Login" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="2">
+               <Button onAction="#initCreateAccountScene" fx:id="createAccountBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Create Account" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                   <font>
                      <Font size="11.0" />
                   </font>
