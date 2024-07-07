@@ -80,6 +80,7 @@ public class MedicalPortalController {
         // Correctly get the EditInfoController instead of PatientPortalController
         EditInfoController controller = loader.getController();
         controller.setPatient(patient);
+        controller.setStaff(staff);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
