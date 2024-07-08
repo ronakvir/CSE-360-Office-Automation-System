@@ -26,7 +26,7 @@ public class PatientPortalController {
     @FXML
     private Label phone;
     @FXML
-    private TextArea information;
+    private TextArea prescriptionInfo;
 
     public PatientPortalController() {
     }
@@ -41,8 +41,8 @@ public class PatientPortalController {
         full_name.setText(patient.getLastname() + ", " + patient.getFirstname());
         age.setText(String.valueOf(patient.getAge()));
         phone.setText(patient.getTelephone());
-        information.setText(patient.getInformation());
-        information.setEditable(false);
+        prescriptionInfo.setText(patient.getInformation());
+        prescriptionInfo.setEditable(false);
 
     }
 
