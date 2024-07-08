@@ -154,7 +154,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#initEditInfo" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: orange; -fx-background-radius: 15px;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveInformation" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: orange; -fx-background-radius: 15px;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <effect>
                         <DropShadow />
                      </effect>
