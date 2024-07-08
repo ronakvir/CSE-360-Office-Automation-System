@@ -1,6 +1,7 @@
 package cse_360_group_project.Controllers;
 
 import cse_360_group_project.StartApplication;
+import cse_360_group_project.Lib.UserMockDB;
 import cse_360_group_project.Users.Patient;
 import cse_360_group_project.Users.User;
 import javafx.event.ActionEvent;
@@ -10,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -29,6 +31,8 @@ public class MedicalPortalController {
     private Label phone;
     @FXML
     private Text StaffName;
+    @FXML
+    private TextArea bigInfoTextBox;
 
     public MedicalPortalController() {
     }
@@ -39,6 +43,8 @@ public class MedicalPortalController {
         full_name.setText(patient.getLastname() + ", " + patient.getFirstname());
         age.setText(String.valueOf(patient.getAge()));
         phone.setText(patient.getTelephone());
+        
+        bigInfoTextBox.setText(patient.getInformation());
 
     }
 
@@ -105,5 +111,9 @@ public class MedicalPortalController {
         stage.show();
     }
 
-
+    @FXML
+    public void saveInformation(ActionEvent event) throws IOException {
+    	patient.setInformation(bigInfoTextBox.getText());
+    	UserMockDB.write(patient);
+    }
 }

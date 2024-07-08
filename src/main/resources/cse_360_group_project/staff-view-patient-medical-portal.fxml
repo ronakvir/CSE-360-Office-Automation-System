@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -20,8 +14,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="243.0" prefWidth="527.0" style="-fx-background-color: CADETBLUe;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.MedicalPortalController">
+<AnchorPane prefHeight="243.0" prefWidth="527.0" style="-fx-background-color: CADETBLUe;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.MedicalPortalController">
    <children>
       <Circle layoutX="80.0" layoutY="69.0" radius="122.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
          <effect>
@@ -32,17 +27,17 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color blue="0.7631579041481018" green="0.7553849816322327" red="0.5299707651138306" />
+                        <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
                      </color>
                   </Stop>
                   <Stop offset="0.006711409395973154">
                      <color>
-                        <Color blue="0.7631579041481018" green="0.7553849816322327" red="0.5299707651138306" />
+                        <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color blue="1.0" green="1.0" red="1.0" />
+                        <Color red="1.0" green="1.0" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
@@ -58,29 +53,29 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color blue="0.7631579041481018" green="0.7553849816322327" red="0.5299707651138306" />
+                        <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
                      </color>
                   </Stop>
                   <Stop offset="0.006711409395973154">
                      <color>
-                        <Color blue="0.7631579041481018" green="0.7553849816322327" red="0.5299707651138306" />
+                        <Color red="0.5299707651138306" green="0.7553849816322327" blue="0.7631579041481018" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color blue="1.0" green="1.0" red="1.0" />
+                        <Color red="1.0" green="1.0" blue="1.0" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </fill>
       </Circle>
-      <Pane layoutX="14.0" layoutY="29.0" prefHeight="200.0" prefWidth="311.0">
+      <Pane layoutX="14.0" layoutY="29.0" prefHeight="98.0" prefWidth="311.0">
          <effect>
             <DropShadow />
          </effect>
          <children>
-            <GridPane layoutX="10.0" layoutY="54.0" prefHeight="72.0" prefWidth="292.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
+            <GridPane layoutX="10.0" layoutY="22.0" prefHeight="72.0" prefWidth="292.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="89.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="203.0" />
@@ -96,7 +91,7 @@
                         <Font name="System Bold" size="13.0" />
                      </font>
                   </Label>
-                  <Label fx:id="full_name" alignment="CENTER" contentDisplay="CENTER" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                  <Label fx:id="full_name" alignment="CENTER" contentDisplay="CENTER" text="&lt;NAME&gt;" textFill="#1e4882" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                      <font>
                         <Font name="System Bold" size="13.0" />
                      </font>
@@ -123,12 +118,7 @@
                   </Label>
                </children>
             </GridPane>
-            <Button fx:id="editPatientInfo" layoutX="14.0" layoutY="142.0" mnemonicParsing="false" onAction="#initEditInfo" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Edit Patient Info" textFill="WHITE" />
-            <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Medical Portal:" wrappingWidth="168.0">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Text>
+            <Button fx:id="editPatientInfo" layoutY="-10.0" mnemonicParsing="false" onAction="#initEditInfo" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: midnightblue; -fx-background-radius: 15px;" text="Edit Patient Info" textFill="WHITE" />
          </children>
       </Pane>
       <Pane layoutX="336.0" layoutY="22.0" prefHeight="200.0" prefWidth="168.0">
@@ -145,10 +135,11 @@
                <rowConstraints>
                   <RowConstraints maxHeight="61.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="logout" onAction="#initStartScene" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                  <Button fx:id="logout" onAction="#initStartScene" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: hotpink; -fx-background-radius: 15px;" text="Logout" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -163,10 +154,32 @@
                         <DropShadow />
                      </effect>
                   </Button>
+                  <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveInformation" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: orange; -fx-background-radius: 15px;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
                </children>
             </GridPane>
          </children>
       </Pane>
-      <Text fx:id="StaffName" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff member: &lt;User&gt;" wrappingWidth="168.0" />
+      <Text fx:id="StaffName" layoutX="350.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff member: &lt;User&gt;" wrappingWidth="168.0" />
+      <Text layoutX="180.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Medical Portal" wrappingWidth="168.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Pane layoutX="3.0" layoutY="130.0" prefHeight="110.0" prefWidth="331.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <TextArea fx:id="bigInfoTextBox" layoutX="4.0" prefHeight="104.0" prefWidth="320.0" promptText="Insert info here">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

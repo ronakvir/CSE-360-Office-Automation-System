@@ -122,12 +122,12 @@
                      <DropShadow />
                   </effect>
                </TextField>
-                <Text fill="#151957" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="56.677734375" GridPane.halignment="CENTER">
+                <Text fill="#151957" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" textAlignment="CENTER" wrappingWidth="155.677734375" GridPane.halignment="CENTER">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
                </Text>
-                <Text fill="#151957" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="53.677734375" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <Text fill="#151957" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" textAlignment="CENTER" wrappingWidth="153.677734375" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                   <font>
                      <Font name="System Bold" size="13.0" />
                   </font>
@@ -144,9 +144,8 @@
    </Pane>
    <Pane layoutX="69.0" layoutY="38.0" prefHeight="53.0" prefWidth="215.0">
       <children>
-         <GridPane hgap="5.0" layoutY="2.0" maxWidth="215.0" prefHeight="50.0" prefWidth="215.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
+         <GridPane alignment="CENTER" hgap="5.0" layoutY="9.0" maxWidth="215.0" prefHeight="40.0" prefWidth="215.0" style="-fx-background-color: WHITE; -fx-background-radius: 25px;">
             <columnConstraints>
-               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="40.0" />
             </columnConstraints>
@@ -160,12 +159,12 @@
                <DropShadow />
             </effect>
             <children>
-               <Button onAction="#initStartScene" fx:id="BackBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Back to Portal" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1">
+               <Button fx:id="BackBtn" mnemonicParsing="false" onAction="#initStartScene" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Back to Portal" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                   <font>
                      <Font size="11.0" />
                   </font>
                </Button>
-               <Button onAction="#initCreateAccountScene" fx:id="createAccountBtn" mnemonicParsing="false" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Create Account" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <Button fx:id="createAccountBtn" mnemonicParsing="false" onAction="#initCreateAccountScene" style="-fx-background-radius: 15px; -fx-background-color: lightcoral;" text="Create Account" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.halignment="CENTER">
                   <font>
                      <Font size="11.0" />
                   </font>
