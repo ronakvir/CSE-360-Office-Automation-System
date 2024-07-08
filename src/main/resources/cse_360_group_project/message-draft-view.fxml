@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+    <AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse_360_group_project.Controllers.MessagingDraftController" prefHeight="477.0" prefWidth="553.0" style="-fx-background-color: cadetblue;" >
+      <children>
+         <Circle layoutX="80.0" layoutY="291.0" radius="100.0" stroke="BLACK" strokeType="INSIDE">
+            <fill>
+               <LinearGradient endX="0.4323040380047506" endY="0.17577197149643708" startX="0.4085510688836104" startY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.8421052694320679" green="0.5107212662696838" blue="0.7647823095321655" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.006711409395973154">
+                        <color>
+                           <Color red="0.8421052694320679" green="0.5107212662696838" blue="0.7647823095321655" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </fill>
+         </Circle>
+         <Circle layoutX="179.0" layoutY="431.0" radius="49.0" stroke="BLACK" strokeType="INSIDE">
+            <fill>
+               <LinearGradient endX="0.4323040380047506" endY="0.17577197149643708" startX="0.4085510688836104" startY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.8421052694320679" green="0.5107212662696838" blue="0.7647823095321655" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.006711409395973154">
+                        <color>
+                           <Color red="0.8421052694320679" green="0.5107212662696838" blue="0.7647823095321655" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </fill>
+         </Circle>
+         <Circle layoutX="475.0" layoutY="398.0" radius="71.0" rotate="-54.7" stroke="BLACK" strokeType="INSIDE" translateX="30.0">
+            <fill>
+               <LinearGradient endX="0.4323040380047506" endY="0.17577197149643708" startX="0.4085510688836104" startY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.8421052694320679" green="0.5107212662696838" blue="0.7647823095321655" />
+                        </color>
+                     </Stop>
+                     <Stop offset="0.006711409395973154">
+                        <color>
+                           <Color red="0.8421052694320679" green="0.5107212662696838" blue="0.7647823095321655" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </fill>
+         </Circle>
+         <Pane layoutX="8.0" layoutY="8.0" prefHeight="401.0" prefWidth="536.0">
+            <children>
+               <TextField fx:id="messageContent" alignment="TOP_LEFT" layoutY="2.0" prefHeight="401.0" prefWidth="538.0" promptText="Enter your message here">
+                  <effect>
+                     <DropShadow />
+                  </effect>
+               </TextField>
+            </children>
+         </Pane>
+         <Button fx:id="backBtn" onAction="#initBack" layoutX="14.0" layoutY="427.0" mnemonicParsing="false" prefWidth="98.0" style="-fx-background-color: hotpink; -fx-background-radius: 20px;" text="Back">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Button>
+         <Button fx:id="sendMessageBtn" layoutX="441.0" layoutY="427.0" mnemonicParsing="false" prefWidth="98.0" style="-fx-background-color: midnightblue; -fx-background-radius: 20px;" text="Send Message" textFill="WHITE">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Button>
+      </children></AnchorPane>

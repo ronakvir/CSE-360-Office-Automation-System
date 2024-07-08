@@ -65,11 +65,16 @@ public class MedicalPortalController {
     }
     @FXML
     public void initAppointmentsPage(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(StartApplication.class.getResource("patient-appointments-page.fxml"));
+        FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("staff-appointments-page.fxml"));
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
         stage.setScene(scene);
         stage.show();
+
+        StaffAppointmentsController controller = loader.getController();
+        controller.setUser(staff);
+        controller.setPatient(patient);
     }
 
     @FXML
@@ -80,7 +85,6 @@ public class MedicalPortalController {
         // Correctly get the EditInfoController instead of PatientPortalController
         EditInfoController controller = loader.getController();
         controller.setPatient(patient);
-        controller.setStaff(staff);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
@@ -92,13 +96,14 @@ public class MedicalPortalController {
     public void initStaffPage(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("staff-portal.fxml"));
         Parent root = loader.load();
-
         StaffPortalController controller = loader.getController();
+        controller.setUser(staff);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
         stage.setScene(scene);
         stage.show();
-        controller.setUser(staff);
     }
+
+
 }
