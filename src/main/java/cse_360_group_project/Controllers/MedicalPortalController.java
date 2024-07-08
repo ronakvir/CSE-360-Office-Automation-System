@@ -1,6 +1,7 @@
 package cse_360_group_project.Controllers;
 
 import cse_360_group_project.StartApplication;
+import cse_360_group_project.Lib.UserMockDB;
 import cse_360_group_project.Users.Patient;
 import cse_360_group_project.Users.User;
 import javafx.event.ActionEvent;
@@ -113,5 +114,6 @@ public class MedicalPortalController {
     @FXML
     public void saveInformation(ActionEvent event) throws IOException {
     	patient.setInformation(bigInfoTextBox.getText());
+    	UserMockDB.write(patient);
     }
 }

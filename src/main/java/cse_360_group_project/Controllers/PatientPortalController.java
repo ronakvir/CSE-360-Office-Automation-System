@@ -37,6 +37,7 @@ public class PatientPortalController {
         System.out.println(patient.getUsername());
         System.out.println(patient.getLastname());
         System.out.println(patient.getFirstname());
+        System.out.println(patient.getInformation());
 
         full_name.setText(patient.getLastname() + ", " + patient.getFirstname());
         age.setText(String.valueOf(patient.getAge()));
