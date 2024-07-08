@@ -49,7 +49,12 @@ public class PatientAppointmentsController {
 	
 	@FXML
     public void initMessagingPortal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(StartApplication.class.getResource("messaging-portal.fxml"));
+        FXMLLoader loader = new FXMLLoader(StartApplication.class.getResource("messaging-portal.fxml"));
+        Parent root = loader.load();
+
+        MessagingPortalController controller = loader.getController();
+        controller.setUser(patient);
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root, Y_AXIS, X_AXIS);
         stage.setScene(scene);
